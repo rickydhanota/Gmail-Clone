@@ -20,3 +20,26 @@
     display: none;
     font-weight: 300;
 }
+
+.Icon{
+    padding: 5px;
+}
+
+.sidebarOption:hover > p{
+    display: inline;
+}
+
+.sidebarOption:hover, 
+.sidebarOption:hover > p, 
+.sidebarOption:hover >h3,
+.sidebarOption_active,
+.sidebarOption_active > p,
+.sidebarOption_active >h3 {
+    background-color: #fcecec;
+    color: #c04b37;
+    font-weight: 800 !important;
+}
+
+.sidebarOption_active >p {
+    display: inline !important;
+}

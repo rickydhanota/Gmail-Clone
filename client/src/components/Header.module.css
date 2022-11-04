@@ -28,15 +28,15 @@
 }
 
 .header_middle > .searchIcon {
-    color: gray;
+    color: gray !important;
 }
 
 .header_middle > .header_inputCaret {
-    color: gray;
+    color: gray !important;
 }
 
 .buttonBase{
-    color: gray;
+    color: gray !important;
 }
 
 .header_middle > input {

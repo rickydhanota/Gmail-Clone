@@ -25,3 +25,5 @@ yarn-error.log*
 
 #Notes:
 # Intalled material UI
+#using react-router-dom
+#using redux
