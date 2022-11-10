@@ -10,13 +10,15 @@ function App() {
   return (
     <div className= {styles.app} >
       <Header />
-      <Sidebar />
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element = {<EmailList />} />
-          <Route path='/mail' element = {<Mail />} />
-        </Routes>
-      </BrowserRouter>
+      <div className={styles.app_body}>
+        <Sidebar />
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element = {<EmailList />} />
+            <Route path='/mail' element = {<Mail />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
     </div>
   );
 }
