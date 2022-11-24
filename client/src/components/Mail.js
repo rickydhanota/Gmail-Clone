@@ -17,10 +17,13 @@ import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import PrintIcon from '@mui/icons-material/Print';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import {useSelector} from "react-redux";
+import { selectOpenMail } from '../features/mailSlice';
 
 const Mail = (props) => {
 
     const navigate = useNavigate();
+    const selectedMail = useSelector(selectOpenMail);
 
     return (
         <div className={styles.mail}>
@@ -85,14 +88,14 @@ const Mail = (props) => {
 
             <div className={styles.mail_body}>
                 <div className={styles.mail_bodyHeader}>
-                    <h2>Subject</h2>
+                    <h2>{selectedMail?.subject}</h2>
                     <LabelOutlinedIcon className={styles.mail_important} />
-                    <p>Title</p>
-                    <p className={styles.mail_time}>10pm</p>
+                    <p>{selectedMail?.title}</p>
+                    <p className={styles.mail_time}>{selectedMail?.time}</p>
                 </div>
 
                 <div className={styles.mail_message}>
-                    <p>This is the message</p>
+                    <p>{selectedMail?.description}</p>
                 </div>
             </div>
         </div>

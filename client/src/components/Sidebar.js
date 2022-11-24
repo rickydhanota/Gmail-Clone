@@ -10,11 +10,17 @@ import LabelImportantIcon from '@mui/icons-material/LabelImportant';
 import SendIcon from '@mui/icons-material/Send';
 import DraftsIcon from '@mui/icons-material/Drafts';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import {useDispatch} from "react-redux";
+import { openSendMessage } from '../features/mailSlice';
 
 const Sidebar = (props) => {
+
+    const dispatch = useDispatch();
+
     return (
         <div className= {styles.sidebar}>
-            <Button startIcon={<AddIcon fontSize="large"/>} className={styles.sidebar_compose}>Compose</Button>
+            <Button startIcon={<AddIcon fontSize="large"/>} className={styles.sidebar_compose} onClick = {() => dispatch(openSendMessage())}>Compose</Button>
+
             <SidebarOption Icon={<InboxIcon />} title={"Inbox"} number={220} selected = {true} />
             <SidebarOption Icon={<StarOutlineIcon />} title={"Starred"} number={33} />
             <SidebarOption Icon={<AccessTimeIcon />} title={"Snoozed"} number={16} />
