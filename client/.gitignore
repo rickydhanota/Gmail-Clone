@@ -28,3 +28,7 @@ yarn-error.log*
 #using react-router-dom
 #using redux
 #using react-hook-form
+#Any time I change my code I need to run npm run build to update the production build
+
+#Issues:
+# I'm not sure how to format the time
